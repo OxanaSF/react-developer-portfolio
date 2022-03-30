@@ -1,6 +1,6 @@
 import React from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faBars, faThin } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars, faThin } from "@fortawesome/free-solid-svg-icons"
 
 const Navbar = () => {
   return (
@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-white">
       <div className="container-fluid">
         <button
-          className="navbar-toggler ms-auto"
+          className="navbar-toggler ms-auto btn"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -18,7 +18,8 @@ const Navbar = () => {
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
-          {/* <FontAwesomeIcon icon={faBars} /> */}
+        
+     
         </button>
 
         

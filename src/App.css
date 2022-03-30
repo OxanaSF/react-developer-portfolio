@@ -46,7 +46,7 @@ nav a.nav-link {
 }
 
 .right-section-image {
-  /* background: url("./components/images/computer_and_hands.jpg") no-repeat; */
+  background: url("./components/images/computer_and_hands.jpg") no-repeat;
   background-size: cover;
   opacity: 0.4;
   height: 90vh;
@@ -62,7 +62,7 @@ nav a.nav-link {
 .carousel-inner .item.active,
 .carousel-inner .item img {
   margin: auto;
-  padding: 0px;
+  padding: 0rem;
 }
 
 .text-block {
@@ -81,7 +81,7 @@ nav a.nav-link {
 
 .first-name {
   mix-blend-mode: multiply;
-  text-shadow: -1px 0 black, 0 0.063rem black, 0.063rem 0 black,
+  text-shadow: -0.063rem 0 black, 0 0.063rem black, 0.063rem 0 black,
     0 -0.063rem black;
 }
 
@@ -92,4 +92,10 @@ nav a.nav-link {
 
 .text-block > h6 {
   color: var(--color-gray);
+}
+
+/* TYPED TEXT*/
+
+.typed-text {
+  margin-left: 0.938rem;
 }

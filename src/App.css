@@ -181,18 +181,23 @@ nav a.nav-link {
   align-self: flex-end;
 }
 
-.btn-download a {
+.btn-download > a {
   text-decoration: none;
   color: #fff;
   font-weight: 400;
 }
 
-.about-right-text .btn-download:hover {
+.about-right-text .btn-download:hover,
+ a:hover,
+ .btn-download:focus
+  {
   border: 0.094rem solid black;
   background-color: white !important;
   color: black;
   font-weight: bold !important;
 }
+
+
 
 /* ==============================================PORTFOLIO================================================== */
 

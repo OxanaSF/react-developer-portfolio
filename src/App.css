@@ -5,6 +5,7 @@
   --primary-red: #ff2a39;
   --white: #fff;
   --color-gray: #65676b;
+  --color-lightest: #f0f2f5;
 }
 body {
   font-family: "Mulish", sans-serif !important;
@@ -13,7 +14,15 @@ body {
 /* ==============================================NAVBAR================================================== */
 
 .navbar {
-  width: 100%;
+  padding: 0 !important;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container-fluid {
+  width: 100% !important;
+  margin-right: 0 !important;
+  padding-bottom: 20px;
+  margin-bottom: 0 !important;
 }
 
 /* NAVBAR LINKS */
@@ -50,6 +59,7 @@ nav a.nav-link {
   background-size: cover;
   opacity: 0.4;
   height: 90vh;
+  position: relative;
 }
 
 .d-block {
@@ -58,12 +68,12 @@ nav a.nav-link {
   height: 90vh;
 }
 
-.carousel-inner .item,
+/* .carousel-inner .item,
 .carousel-inner .item.active,
 .carousel-inner .item img {
   margin: auto;
   padding: 0rem;
-}
+} */
 
 .text-block {
   position: absolute;
@@ -118,6 +128,12 @@ nav a.nav-link {
   background: url("./components/images/oxana_img.jpeg") no-repeat;
   background-size: cover;
   border-radius: 0.313rem;
+
+  border: 2px solid #fff;
+  -moz-box-shadow: inset 10px 10px 50px #fff;
+  -webkit-box-shadow: inset 10px 10px 50px #fff;
+  box-shadow: inset 10px 10px 50px #fff;
+  opacity: 0.9;
 }
 
 .about-right-text {
@@ -126,10 +142,8 @@ nav a.nav-link {
 
 .about-section .about-right-text h1 {
   text-transform: uppercase;
-  color: black;
-  font-weight: 600;
-  font-size: 35px;
-  letter-spacing: 0.094rem;
+  color: black !important;
+  font-weight: 700;
 }
 
 .about-section .about-right-text h6 {
@@ -143,6 +157,7 @@ nav a.nav-link {
 
 .about-section .about-right-text p {
   line-height: 37px;
+
   letter-spacing: 1px;
   color: rgb(65, 64, 64);
   font-size: 15px;
@@ -171,4 +186,170 @@ nav a.nav-link {
   background-color: white !important;
   color: black;
   font-weight: bold !important;
+}
+
+/* ==============================================PORTFOLIO================================================== */
+
+.portfolio-row {
+  min-height: 70vh;
+  background-color: var(--color-lightest);
+}
+
+/* ==========CARD GALERY============ */
+
+.food-menu .main-heading {
+  /* background-color: var(--color-lightest) !important; */
+  display: grid;
+  justify-items: center;
+  font-size: 60px;
+  margin: 0;
+  color: black;
+}
+
+.cards-gallery {
+  padding: 5px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  /* background-color: var(--color-lightest); */
+  padding-bottom: 50px;
+}
+
+.card {
+  margin: 5px;
+  height: 30vw;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.card:hover .card-overlay {
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: black;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: left 0.7s;
+}
+
+.card-overlay-heading {
+  /* font-family: "Nunito", sans-serif; */
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .card-overlay-heading {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 650px) {
+  .card-overlay-heading {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .card-overlay-heading {
+    display: none;
+  }
+}
+
+.card-overlay-paragraph {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-weight: lighter;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+@media (max-width: 900px) {
+  .card-overlay-paragraph {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .card-overlay-paragraph {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .card-overlay-paragraph {
+    display: 12px;
+  }
+}
+
+.card-overlay-btn {
+  width: 130px;
+  height: 40px;
+  color: var(--white);
+  background-color: #000;
+  /* opacity: 0.5; */
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  border: 1px solid black;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
+@media (max-width: 900px) {
+  .card-overlay-btn {
+    font-size: 12px;
+    width: 130px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .card-overlay-btn {
+    font-size: 10px;
+    width: 100px;
+    height: 30px;
+  }
+}
+
+.card-img {
+  object-fit: cover;
+  opacity: 0.5;
+  height: 100%;
+}
+
+/* ==============================================CONTACTS================================================== */
+
+.contacts-wrapper {
+  margin: 0 !important;
+}
+
+.contacts-row {
+  min-height: 70vh;
+  /* background-color: var( --color-lightest); */
+  margin-top: 9.375rem;
+}
+
+/* ==============================================BLOG================================================== */
+
+.blog-row {
+  min-height: 70vh;
+  background-color: var(--color-lightest);
 }

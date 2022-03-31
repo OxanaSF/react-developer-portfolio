@@ -5,7 +5,8 @@ import Typed from "react-typed";
 
 const Header = () => {
   return (
-    <div className="container header-wraper">
+    <div id="home" className="container header-wraper">
+      
       <div className="text-block">
         <h1 className="first-name">Howard</h1>
         <h1>
@@ -20,6 +21,7 @@ const Header = () => {
           loop
         />
       </div>
+
       <div className="row">
         <div className="col-sm-4 left-section-name"></div>
 

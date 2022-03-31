@@ -1,4 +1,5 @@
 import React from "react";
+import cv from "./images/OxanaH_CV.pdf"
 
 // import portrait from "./images/fall.jpg"
 
@@ -23,7 +24,7 @@ const About = () => {
             pariatur. Excepteur sint occaecat cupidatat non proident.
           </p>
           <button className="btn btn-dark btn-lg btn-download">
-            Download CV
+            <a href={cv} download="OxanaH_CV.pdf"> Download CV </a>
           </button>
         </div>
       </div>

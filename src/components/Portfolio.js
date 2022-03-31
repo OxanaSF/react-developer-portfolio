@@ -3,8 +3,8 @@ import WebDevProject from "./WebDevProject";
 
 const Portfolio = (props) => {
   return (
-    <div id="portfolio" class="food-menu">
-      <h1 id="scroll-gallery" class="main-heading">
+    <div id="portfolio" className="food-menu">
+      <h1 id="scroll-gallery" className="main-heading">
         Portfolio
       </h1>
 

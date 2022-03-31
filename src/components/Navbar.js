@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faThin } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-scroll";
 import BlogLink from "./BlogLink";
+// import { Link } from "react-router-dom";
 
 // import { Link } from "react-router-dom";
 
@@ -25,6 +26,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
+              
               <Link
                 to="home"
                 className="nav-link active"

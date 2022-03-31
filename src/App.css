@@ -202,8 +202,13 @@ nav a.nav-link {
   display: grid;
   justify-items: center;
   font-size: 60px;
-  margin: 0;
-  color: black;
+  /* margin-left: 60px; */
+  /* color: black; */
+  margin-bottom: 50px;
+
+  text-transform: uppercase;
+  color: black !important;
+  font-weight: 700;
 }
 
 .cards-gallery {
@@ -244,7 +249,7 @@ nav a.nav-link {
 
 .card-overlay-heading {
   /* font-family: "Nunito", sans-serif; */
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: capitalize;
@@ -341,6 +346,19 @@ nav a.nav-link {
   margin: 0 !important;
 }
 
+.contacts-wrapper h1 {
+  justify-items: center;
+  font-size: 60px;
+  /* margin-left: 60px; */
+  /* color: black; */
+  margin-top: 50px;
+  text-align: center;
+
+  text-transform: uppercase;
+  color: black !important;
+  font-weight: 700;
+}
+
 .contacts-row {
   min-height: 70vh;
   /* background-color: var( --color-lightest); */
@@ -349,7 +367,56 @@ nav a.nav-link {
 
 /* ==============================================BLOG================================================== */
 
-.blog-row {
-  min-height: 70vh;
-  background-color: var(--color-lightest);
+/* .container {
+  margin: 0 !important;
+} */
+
+
+.blog-wrapper {
+  min-height: 100vh;
+  background-color:violet;
+  text-align: center;
+  padding-top: 100px;
 }
+
+
+
+
+/* ==============================================BLOG NAVBAR================================================== */
+
+.navbar {
+  padding: 0 !important;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-navbar {
+  /* width: 100% !important; */
+  margin-right: 0 30px;
+  padding: 0 30px;
+  padding-bottom: 20px;
+  margin-bottom: 0 !important;
+}
+
+/* NAVBAR LINKS */
+
+nav a.nav-link {
+  font-weight: 500;
+  letter-spacing: 0.038rem;
+  cursor: pointer;
+  font-size: 0.938rem;
+}
+
+.navbar-nav > li > a {
+  color: var(--color-primary) !important;
+  justify-content: space-between;
+  margin-top: 1.875rem;
+  margin-left: 0.938rem;
+  border-bottom: 0.1875rem solid var(--white);
+}
+
+.navbar-nav > li > a.active,
+.navbar-nav > li > a.active:focus,
+.navbar-nav > li > a:hover {
+  border-bottom: 0.1875rem solid var(--primary-red);
+}
+

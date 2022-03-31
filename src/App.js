@@ -1,21 +1,16 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Navbar from './components/Navbar';
-import Header from './components/Header'
-import About from './components/About';
-import Portfolio from './components/Portfolio';
-import Contacts from './components/Contacts';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Routes, Route } from "react-router-dom";
+import MainPage from "./components/MainPage";
+import Blog from "./components/Blog";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Header />
-      <About />
-      <Portfolio />
-      <Contacts />
-      
-      
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="blog" element={<Blog />} />
+      </Routes>
     </div>
   );
 }

@@ -4,7 +4,8 @@ const Contact = () => {
   return (
     <div id="contact" className="contact-wrapper">
       <div className="input-area">
-        <h1>Contact</h1>
+        <div className="contact-title">Contact</div>
+        <h1>Get in Touch</h1>
         <label for="exampleFormControlInput1" className="form-label"></label>
         <input
           className="input-cell"

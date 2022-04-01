@@ -11,11 +11,13 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route index element={<MainPage webDevProjects={webDevProjects}  />} />
+        <Route index element={<MainPage webDevProjects={webDevProjects} />} />
+
         <Route
           path=":section"
           element={<MainPage webDevProjects={webDevProjects} />}
         />
+
         <Route path="blog" element={<Blog />}></Route>
       </Route>
     </Routes>

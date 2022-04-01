@@ -9,7 +9,7 @@ import Contact from "./Contact";
 const MainPage = (props) => {
   return (
     <div>
-      <Navbar />
+      
       <Header />
       <About />
       <Portfolio webDevProjects={props.webDevProjects} />

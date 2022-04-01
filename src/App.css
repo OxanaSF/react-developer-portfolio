@@ -45,9 +45,7 @@ nav a.nav-link {
   border-bottom: 0.1875rem solid var(--white);
 }
 
-
-
-.navbar-nav > li > a.active,
+.navbar-nav > li > Link.active,
 .navbar-nav > li > a.active:focus,
 .navbar-nav > li > a:hover::after {
   border: none;
@@ -185,7 +183,7 @@ nav a.nav-link {
 
 .btn-download {
   text-decoration: none;
-  padding: 1.70rem 4rem;
+  padding: 1.7rem 4rem;
   color: #fff;
   background-color: black;
   border-radius: 2.5rem !important;
@@ -255,7 +253,7 @@ a:hover,
   display: grid;
   grid-template-columns: auto auto auto;
   background-color: #f8f9fa;
-  /* padding-bottom: 1.125rem; */
+  padding-bottom: 1.125rem;
   /* margin-bottom: 1.25rem; */
 }
 
@@ -388,18 +386,39 @@ a:hover,
   flex-direction: column;
   align-items: center;
   min-height: 50vh;
-  /* border-top: 0.063rem solid rgb(212, 209, 209); */
-  /* padding-top: 6.25rem; */
   margin-bottom: 9.375rem;
+  margin-top: 12.375rem;
+}
+
+.contact-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10rem;
+  letter-spacing: 0.25rem;
+  font-weight: 700;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  mix-blend-mode: multiply;
+  text-shadow: -0.063rem 0 rgb(201, 198, 198), 0 0.063rem rgb(201, 198, 198),
+    0.063rem 0 rgb(201, 198, 198), 0 -0.063rem rgb(201, 198, 198);
 }
 
 .contact-wrapper h1 {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 50px;
+  /* display: grid; */
+  justify-items: start;
+  font-size: 4.75rem;
+  font-size: 3.75rem;
+  margin-bottom: 0rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-bottom: 3.125rem;
+  padding-left: 1.25rem;
 }
 
 .input-area {
-  width: 60%;
+  width: 65%;
 }
 
 .input-area input {
@@ -409,9 +428,6 @@ a:hover,
 .input-area textarea {
   height: 150px;
 }
-
-
-
 
 /* ==============================================BLOG================================================== */
 

@@ -5,10 +5,12 @@ import { Outlet, useParams } from "react-router-dom";
 import { scroller } from "react-scroll";
 
 
+
 function App() {
   const { section } = useParams();
 
   useEffect(() => {
+    console.log(section)
     scroller.scrollTo(section);
   }, [section]);
 

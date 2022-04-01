@@ -44,8 +44,8 @@ const BlogNavbar = () => {
             </li>
 
             <li className="nav-item">
-              <Link to="/contacts" className="nav-link" href="#">
-                Contacts
+              <Link to="/contact" className="nav-link" href="#">
+                Contact
               </Link>
             </li>
 

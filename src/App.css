@@ -45,17 +45,24 @@ nav a.nav-link {
   border-bottom: 0.1875rem solid var(--white);
 }
 
+
+
 .navbar-nav > li > a.active,
 .navbar-nav > li > a.active:focus,
-.navbar-nav > li > a:hover {
+.navbar-nav > li > a:hover::after {
   border: none;
   border-bottom: var(--primary-red);
+  transition: 0.3;
 }
 
 /* ==============================================HEADER================================================== */
 
-.header-wraper {
+.container {
   margin-right: 0 !important;
+}
+
+.header-wraper {
+  margin-bottom: 200px;
 }
 
 .right-section-image {
@@ -115,21 +122,21 @@ nav a.nav-link {
 }
 
 /* ==============================================ABOUT================================================== */
+.container-xxl {
+  margin: 0 !important;
+}
 
-.about-wrapper {
-  margin-top: 9.375rem;
-  margin-bottom: 9.375rem;
-  margin-bottom: 12rem;
-  /* width: 75%!important; */
-  /* height: 70vh; */
+.row {
+  margin-top: 100px;
 }
 
 .about-section {
-  margin-top: 3.125rem;
-  height: 60vh;
+  /* margin-top: 3.125rem; */
+  height: 50vh;
 }
 
 .about-left-img {
+  margin-left: 100px;
   background: url("./components/images/oxana_img.jpeg") no-repeat;
   background-size: cover;
   border-radius: 0.313rem;
@@ -140,6 +147,7 @@ nav a.nav-link {
 
 .about-right-text {
   padding: 0rem 3.5rem !important;
+  margin-left: 100px;
 }
 
 .about-section .about-right-text h1 {
@@ -171,18 +179,19 @@ nav a.nav-link {
   padding-top: 1.25rem;
 }
 
+.about-right-text .par2 {
+  margin-bottom: 3rem;
+}
+
 .btn-download {
   text-decoration: none;
-  font-family: "Mulish", sans-serif;
-  padding: 1.25rem 2.5rem;
+  padding: 1.70rem 4rem;
   color: #fff;
   background-color: black;
   border-radius: 2.5rem !important;
   font-size: 1.25rem;
   letter-spacing: 0.063rem;
-  font-weight: lighter !important;
-  width: 13.75rem;
-  height: 3.77rem;
+  letter-spacing: 1.5px;
 }
 
 .btn-download > a {
@@ -218,6 +227,7 @@ a:hover,
 /* ==========CARD GALERY============ */
 
 .portfolio-section {
+  margin-top: 200px;
   background-color: #f8f9fa;
   text-transform: uppercase;
   text-align: center;
@@ -245,8 +255,8 @@ a:hover,
   display: grid;
   grid-template-columns: auto auto auto;
   background-color: #f8f9fa;
-  padding-bottom: 7.125rem;
-  margin-bottom: 6.25rem;
+  /* padding-bottom: 1.125rem; */
+  /* margin-bottom: 1.25rem; */
 }
 
 .card {
@@ -378,22 +388,42 @@ a:hover,
   flex-direction: column;
   align-items: center;
   min-height: 50vh;
-  border-top: 0.063rem solid rgb(212, 209, 209);
+  /* border-top: 0.063rem solid rgb(212, 209, 209); */
   /* padding-top: 6.25rem; */
   margin-bottom: 9.375rem;
 }
 
-/* ==============================================BLOG================================================== */
+.contact-wrapper h1 {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
 
-/* .container {
-  margin: 0 !important;
-} */
+.input-area {
+  width: 60%;
+}
+
+.input-area input {
+  height: 60px;
+}
+
+.input-area textarea {
+  height: 150px;
+}
+
+
+
+
+/* ==============================================BLOG================================================== */
 
 .blog-wrapper {
   min-height: 100vh;
   background-color: violet;
   text-align: center;
   padding-top: 6.25rem;
+}
+
+.blog-wrapper h1 {
+  margin-top: 300px;
 }
 
 /* ==============================================BLOG NAVBAR================================================== */

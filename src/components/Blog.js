@@ -5,10 +5,10 @@ import BlogNavbar from "./BlogNavbar";
 const Blog = () => {
   return (
     <>
-      <BlogNavbar className="container" />
+      <BlogNavbar />
      
 
-      <div id="blog" className="container blog-wrapper">
+      <div id="blog" className="blog-wrapper">
         <h1>My Blog Will Be Here ....</h1>
       </div>
     </>

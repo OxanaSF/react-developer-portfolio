@@ -1,17 +1,13 @@
 import React from "react";
-import cv from "./images/OxanaH_CV.pdf"
-
-// import portrait from "./images/fall.jpg"
+import cv from "./images/OxanaH_CV.pdf";
 
 const About = () => {
   return (
     <div id="about" className="container about-wrapper">
       <div className="row about-section">
-        <div className="col-lg-5 col-xm-12 about-left-img">
-          {/* <img src={portrait} alt="portrait..."/> */}
-        </div>
+        <div className="col-lg-5 col-xm-12 about-left-img"></div>
         <div className="col-lg-7 col-xm-12 about-right-text">
-          <h1 className="main-heading">Oxana Howard</h1>
+          <h1>About me</h1>
           <h6>Web App & Front-end Developer</h6>
           <p className="par1">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -23,9 +19,10 @@ const About = () => {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident.
           </p>
-          <button className="btn btn-dark btn-lg btn-download">
-            <a href={cv} download="OxanaH_CV.pdf"> Download CV </a>
-          </button>
+          <a className="btn-download" href={cv} download="OxanaH_CV.pdf">
+            {" "}
+            Download CV{" "}
+          </a>
         </div>
       </div>
     </div>

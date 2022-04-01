@@ -10,8 +10,8 @@ import { webDevProjects } from "./components/data";
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App webDevProjects={webDevProjects} />}>
-        <Route index element={<MainPage webDevProjects={webDevProjects} />} />
+      <Route path="/" element={<App />}>
+        <Route index element={<MainPage webDevProjects={webDevProjects}  />} />
         <Route
           path=":section"
           element={<MainPage webDevProjects={webDevProjects} />}

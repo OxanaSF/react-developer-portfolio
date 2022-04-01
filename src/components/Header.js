@@ -8,9 +8,9 @@ const Header = () => {
     <div id="home" className="container header-wraper">
       
       <div className="text-block">
-        <h1 className="first-name">Howard</h1>
+        <h1 className="last-name">Howard</h1>
         <h1>
-          <span className="last-name">Oxana</span>
+          <span className="first-name">Oxana</span>
         </h1>
         {/* <h5>React Developer</h5> */}
         <Typed
@@ -23,9 +23,9 @@ const Header = () => {
       </div>
 
       <div className="row">
-        <div className="col-sm-4 left-section-name"></div>
+        <div className="col-sm-2 left-section-name"></div>
 
-        <div className="col-sm-8 right-section-image"></div>
+        <div className="col-sm-10 right-section-image"></div>
 
         {/* <div className="col-sm-8 right-section-image">
           <div

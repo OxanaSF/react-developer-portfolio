@@ -21,6 +21,9 @@ ReactDOM.render(
         <Route path="blog" element={<Blog />}></Route>
       </Route>
     </Routes>
+
   </BrowserRouter>,
+
+  
   document.getElementById("root")
 );

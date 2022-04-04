@@ -77,12 +77,12 @@ nav a.nav-link {
   height: 90vh;
 }
 
-/* .carousel-inner .item,
+.carousel-inner .item,
 .carousel-inner .item.active,
 .carousel-inner .item img {
   margin: auto;
   padding: 0rem;
-} */
+}
 
 .text-block {
   position: absolute;
@@ -157,7 +157,9 @@ nav a.nav-link {
 
 .about-section .about-right-text h6 {
   color: rgb(29, 28, 28);
-  font-weight: 600;
+  color: rgb(31, 30, 30);
+  font-weight: 300;
+  font-size: 1.3rem;
   letter-spacing: 0.056rem;
   padding-top: 1.25rem;
   padding-bottom: 3.125rem;
@@ -169,8 +171,9 @@ nav a.nav-link {
 
   letter-spacing: 0.063rem;
   color: rgb(19, 18, 18);
+  color: rgb(31, 30, 30);
   font-size: 1.25rem;
-  font-weight: light;
+  font-weight: 400;
 }
 
 .about-right-text .par1 {

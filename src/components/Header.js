@@ -27,7 +27,7 @@ const Header = () => {
 
         <div className="col-sm-10 right-section-image"></div>
 
-        {/* <div className="col-sm-8 right-section-image">
+        {/* <div className="col-sm-10 right-section-image">
           <div
             id="carouselExampleFade"
             class="carousel slide carousel-fade"

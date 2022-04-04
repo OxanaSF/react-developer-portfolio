@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Outlet, useParams } from "react-router-dom";
 import { scroller } from "react-scroll";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   const { section } = useParams();
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Outlet />
+      <Footer />
     </div>
   );
 }

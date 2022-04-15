@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import verticalImages from "./verticalImages";
 
-const VerticalCarousel = () => {
+const VerticalCarousel = (props) => {
   const [width, setWidth] = useState(0);
   const carousel = useRef();
   useEffect(() => {
@@ -21,10 +21,13 @@ const VerticalCarousel = () => {
           dragConstraints={{ right: 0, left: -width }}
           className="inner-carousel"
         >
-          {verticalImages.map((image) => {
+          {props.webDevProjects.map((project) => {
             return (
-              <motion.div className="item">
-                <img src={image} alt="" />
+              <motion.div className="vertical-item">
+                <motion.iframe
+                  className="vertical-item"
+                  src={project.url}
+                ></motion.iframe>
               </motion.div>
             );
           })}

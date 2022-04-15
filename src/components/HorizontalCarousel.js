@@ -1,8 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import horizontalImages from "./horizontalImages";
+// import horizontalImages from "./horizontalImages";
+// import webDevProjects from "./data";
 
-const HorizontalCarousel = () => {
+const HorizontalCarousel = (props) => {
   const [width, setWidth] = useState(0);
   const carousel = useRef();
   useEffect(() => {
@@ -21,10 +22,13 @@ const HorizontalCarousel = () => {
           dragConstraints={{ right: 0, left: -width }}
           className="inner-carousel"
         >
-          {horizontalImages.map((image) => {
+          {props.webDevProjects.map((project) => {
             return (
               <motion.div className="horizontal-item">
-                <img src={image} alt="" />
+                <motion.iframe
+                  className="horizontal-item"
+                  src={project.url}
+                ></motion.iframe>
               </motion.div>
             );
           })}

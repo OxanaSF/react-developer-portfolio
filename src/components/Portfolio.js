@@ -2,24 +2,47 @@ import React, { useState } from "react";
 import VerticalCarousel from "./VerticalCarousel";
 import HorizontalCarousel from "./HorizontalCarousel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMobile,
-  faLaptop,
-  faArrowRight,
-  faArrowRightLong,
-} from "@fortawesome/free-solid-svg-icons";
+import { faMobile, faLaptop } from "@fortawesome/free-solid-svg-icons";
 
 const Portfolio = (props) => {
   const [isMobale, setIsMobale] = useState(false);
 
-
-  const turnMobalHandler = () => {
-    setIsMobale(true);
+  const switchMobalDesctopHandler = () => {
+    setIsMobale(!isMobale);
   };
 
-  const turnDesctopHandler = () => {
-    if (isMobale) setIsMobale(false);
-  };
+  const desctopDisplay = (
+    <div
+      type="button"
+      onClick={switchMobalDesctopHandler}
+      className="btn-desktop-mobale"
+    >
+      <div className="portfolio-icons portfolio-icons-left">
+        <FontAwesomeIcon
+          className="portfolio-icon icon-mobale"
+          icon={faMobile}
+        />
+
+        <span>View the Mobile Version</span>
+      </div>
+    </div>
+  );
+
+  const mobaleDisplay = (
+    <div
+      type="button"
+      onClick={switchMobalDesctopHandler}
+      className="btn-desktop-mobale"
+    >
+      <div className="portfolio-icons">
+        <FontAwesomeIcon
+          className="portfolio-icon icon-desktop"
+          icon={faLaptop}
+        />
+        <span>View the Desktop Version</span>
+      </div>
+    </div>
+  );
 
   return (
     <div id="portfolio" className="portfolio-section">
@@ -29,45 +52,13 @@ const Portfolio = (props) => {
         Projects
       </h1>
 
+      {!isMobale && desctopDisplay}
       {!isMobale && (
-        <div
-          type="button"
-          onClick={turnMobalHandler}
-          className="btn-desktop-mobale"
-        >
-          <div className="portfolio-icons portfolio-icons-left">
-            <FontAwesomeIcon
-              className="portfolio-icon icon-mobale"
-              icon={faMobile}
-            />
-
-            <span>View the Mobile Version</span>
-          </div>
-        </div>
-      )}
-      {!isMobale && <HorizontalCarousel />}
-
-
-      {isMobale && (
-        <div
-          type="button"
-          onClick={turnMobalHandler}
-          className="btn-desktop-mobale"
-        >
-          
-
-          <div className="portfolio-icons">
-            <FontAwesomeIcon
-              className="portfolio-icon icon-desktop"
-              icon={faLaptop}
-            />
-            <span>View the Desktop Version</span>
-          </div>
-          
-        </div>
+        <HorizontalCarousel webDevProjects={props.webDevProjects} />
       )}
 
-      {isMobale && <VerticalCarousel />}
+      {isMobale && mobaleDisplay}
+      {isMobale && <VerticalCarousel webDevProjects={props.webDevProjects} />}
     </div>
   );
 };

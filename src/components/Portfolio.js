@@ -11,17 +11,14 @@ import {
 
 const Portfolio = (props) => {
   const [isMobale, setIsMobale] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(true);
+
 
   const turnMobalHandler = () => {
     setIsMobale(true);
-    // setIsDesktop(false);
   };
 
   const turnDesctopHandler = () => {
-    if (isMobale)
-      setIsMobale(false);
-    // setIsDesktop(true);
+    if (isMobale) setIsMobale(false);
   };
 
   return (
@@ -32,126 +29,45 @@ const Portfolio = (props) => {
         Projects
       </h1>
 
-      {!isMobale &&
-        (
-          <div
-            type="button"
-            onClick={turnMobalHandler}
-            className="btn-desktop-mobale"
-          >
-            <div className="icons-left">
+      {!isMobale && (
+        <div
+          type="button"
+          onClick={turnMobalHandler}
+          className="btn-desktop-mobale"
+        >
+          <div className="portfolio-icons portfolio-icons-left">
+            <FontAwesomeIcon
+              className="portfolio-icon icon-mobale"
+              icon={faMobile}
+            />
 
-
-
-              <div className="portfolio-icons portfolio-icons-left">
-                <FontAwesomeIcon
-                  className="portfolio-icon icon-mobale"
-                  icon={faMobile}
-                />
-
-                <span>
-                  Mobale
-                </span>
-              </div>
-
-
-              <div className="portfolio-icons portfolio-icons-right"
-              style={
-                !isMobale
-                  ? { pointerEvents: "none" }
-                  : { pointerEvents: "!none" }
-              }
-              >
-                <FontAwesomeIcon
-                style={
-                  !isMobale
-                    ? { pointerEvents: "none" }
-                    : { pointerEvents: "!none" }
-                }
-                  className="portfolio-icon icon-desktop"
-                  icon={faLaptop}
-                />
-                <span
-                  className="mobal-text"
-                  style={
-                    !isMobale
-                      ? { borderBottom: "3px solid red", pointerEvents: "none" }
-                      : { color: "transparent" }
-                  }
-                >
-                  Desktop
-                </span>
-              </div>
-            </div>
-
-            {/* <FontAwesomeIcon
-            className="portfolio-icon icon-arrow-right"
-            icon={faArrowRight}
-          /> */}
+            <span>View the Mobile Version</span>
           </div>
-
-        )
-      }
-
+        </div>
+      )}
       {!isMobale && <HorizontalCarousel />}
-
-
 
 
       {isMobale && (
         <div
-          // type="button"
-          onClick={turnDesctopHandler}
+          type="button"
+          onClick={turnMobalHandler}
           className="btn-desktop-mobale"
         >
-          <div className="icons-left">
-            <div className="portfolio-icons"
           
-            >
-              <FontAwesomeIcon
-               style={
-                isMobale
-                  ? { cursor: "none" }
-                  : { cursor: "!none" }
-              }
-                className="portfolio-icon icon-mobale"
-                icon={faMobile}
-              />
 
-              <span
-                className="mobal-text"
-                style={
-                  isMobale
-                    ? { borderBottom: "3px solid red", cursor: "none" }
-                    : { cursor: "!none" }
-                }
-              >Mobale
-              </span>
-            </div>
-
-          
           <div className="portfolio-icons">
             <FontAwesomeIcon
               className="portfolio-icon icon-desktop"
               icon={faLaptop}
             />
-            <span>
-              Desktop
-            </span>
+            <span>View the Desktop Version</span>
           </div>
-          </div>
-
-          {/* <FontAwesomeIcon
-            className="portfolio-icon icon-arrow-right"
-            icon={faArrowRight}
-          /> */}
+          
         </div>
       )}
 
       {isMobale && <VerticalCarousel />}
-
-
-
     </div>
   );
 };

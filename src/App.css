@@ -232,32 +232,14 @@ a:hover,
  justify-content: center;
 }
 
-/* .icon-arrow-right {
- float: right;
-} */
-
-.icons-left {
-  display: flex;
-  justify-content: center;
- 
-}
-
 
 .portfolio-icons {
   display: flex;
   align-items: center;
   gap: 3px;
-  
 }
 
-.portfolio-icons-right {
-  background-color: lawngreen;
-  margin-left: 30px
-}
 
-.portfolio-icons-left {
-  background-color:var(--primary-red);
-}
 
 .mobal-text {
   padding-left: 2px;

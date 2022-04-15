@@ -213,6 +213,7 @@ a:hover,
 }
 
 /* ==============================================PORTFOLIO================================================== */
+
 .portfolio-title {
   text-transform: uppercase;
   font-size: 10rem;
@@ -224,6 +225,55 @@ a:hover,
   text-shadow: -0.063rem 0 rgb(201, 198, 198), 0 0.063rem rgb(201, 198, 198),
     0.063rem 0 rgb(201, 198, 198), 0 -0.063rem rgb(201, 198, 198);
 }
+
+/* MOBALE DESKTOP BUTTONS */
+.btn-desktop-mobale {
+  display: flex;
+ justify-content: center;
+}
+
+/* .icon-arrow-right {
+ float: right;
+} */
+
+.icons-left {
+  display: flex;
+  justify-content: center;
+ 
+}
+
+
+.portfolio-icons {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  
+}
+
+.portfolio-icons-right {
+  background-color: lawngreen;
+  margin-left: 30px
+}
+
+.portfolio-icons-left {
+  background-color:var(--primary-red);
+}
+
+.mobal-text {
+  padding-left: 2px;
+  padding-right: 5px;
+}
+
+.portfolio-icon {
+  font-size: 30px;
+}
+
+
+
+
+
+  
+
 
 /* ==========CARD GALERY============ */
 
@@ -249,6 +299,7 @@ a:hover,
   /* padding-top: 1.25rem; */
   padding-bottom: 3.125rem;
   padding-left: 1.25rem;
+  margin-left: 20px;
 }
 
 .cards-gallery {
@@ -481,4 +532,46 @@ nav a.nav-link {
 .navbar-nav > li > a.active:focus,
 .navbar-nav > li > a:hover {
   border-bottom: 0.1875rem solid var(--primary-red);
+}
+
+
+/* ==============================================CAROUSEL================================================== */
+
+
+/* VERTICAL IMAGES */
+.item {
+  min-height: 40rem;
+  min-width: 30rem;
+  padding: 40px;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  pointer-events: none;
+}
+
+.inner-carousel {
+  display: flex;
+}
+
+.carousel {
+  cursor: grab;
+  overflow: hidden;
+}
+
+/* HORIZONTAL IMAGES */
+
+.horizontal-item {
+  min-height: 30rem;
+  min-width: 40rem;
+  padding: 40px;
+}
+
+.horizontal-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  pointer-events: none;
 }

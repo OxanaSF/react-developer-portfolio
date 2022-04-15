@@ -7,6 +7,7 @@ import MainPage from "./components/MainPage";
 import Blog from "./components/Blog";
 import { webDevProjects } from "./components/data";
 
+
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
@@ -15,7 +16,8 @@ ReactDOM.render(
 
         <Route
           path=":section"
-          element={<MainPage webDevProjects={webDevProjects} />}
+          element={<MainPage 
+            webDevProjects={webDevProjects} />}
         />
 
         <Route path="blog" element={<Blog />}></Route>

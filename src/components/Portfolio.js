@@ -44,6 +44,7 @@ const Portfolio = (props) => {
     </div>
   );
 
+  
   return (
     <div id="portfolio" className="portfolio-section">
       <div className="portfolio-title">Portfolio</div>

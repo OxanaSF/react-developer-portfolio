@@ -2,7 +2,7 @@ export const webDevProjects = [
   {
     id: 1,
     title: "Project A",
-    url: "https://russian-restaurant.netlify.app/",
+    url: "https://urban-rhythms.netlify.app/",
     githubLink: "Github",
   },
   {
@@ -14,7 +14,7 @@ export const webDevProjects = [
   {
     id: 3,
     title: "Project C",
-    url: `${process.env.PUBLIC_URL}/images/image3_leaves.jpg`,
+    url: "https://russian-restaurant.netlify.app/",
     githubLink: "Github",
   },
   {

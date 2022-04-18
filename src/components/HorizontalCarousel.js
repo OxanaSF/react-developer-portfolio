@@ -1,14 +1,24 @@
 import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-// import horizontalImages from "./horizontalImages";
-// import webDevProjects from "./data";
+
+
 
 const HorizontalCarousel = (props) => {
   const [width, setWidth] = useState(0);
+  const [test, setTest] =useState(false)
+
   const carousel = useRef();
   useEffect(() => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
   }, []);
+
+
+  const testHandler = (e) => {
+    console.log(e.detail)
+    setTest(!test)
+
+  }
+
 
   return (
     <div>
@@ -22,13 +32,16 @@ const HorizontalCarousel = (props) => {
           dragConstraints={{ right: 0, left: -width }}
           className="inner-carousel"
         >
-          {props.webDevProjects.map((project) => {
+          {props.webDevProjects.map((project, index) => {
             return (
-              <motion.div className="horizontal-item">
+              <motion.div key={index} className="horizontal-item">
+               
                 <motion.iframe
-                  className="horizontal-item"
+               
+                  className="horizontal-item-inside"
                   src={project.url}
                 ></motion.iframe>
+                
               </motion.div>
             );
           })}

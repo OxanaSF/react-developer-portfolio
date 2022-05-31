@@ -10,6 +10,10 @@
 body {
   font-family: "Mulish", sans-serif !important;
   /* padding-top: 18.75rem; */
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 /* ============NAVBAR=============== */
@@ -20,7 +24,7 @@ body {
 }
 
 .container-fluid {
-  width: 100% !important;
+  /* width: 100% !important; */
   margin-right: 0 !important;
   padding-bottom: 1.25rem;
   margin-bottom: 0 !important;
@@ -53,71 +57,14 @@ nav a.nav-link {
   transition: 0.3;
 }
 
+@media screen and(max-width: 1332px) {
+}
+
 /* ===============HEADER================= */
 
-.container {
-  margin-right: 0 !important;
-}
 
-.header-wraper {
-  margin-bottom: 200px;
-}
 
-.right-section-image {
-  background: url("./components/images/computer_and_hands.jpg") no-repeat;
-  background-size: cover;
-  opacity: 0.4;
-  height: 90vh;
-  position: relative;
-}
 
-.d-block {
-  background-size: cover;
-  opacity: 0.4;
-  height: 90vh;
-}
-
-.carousel-inner .item,
-.carousel-inner .item.active,
-.carousel-inner .item img {
-  margin: auto;
-  padding: 0rem;
-}
-
-.text-block {
-  position: absolute;
-  bottom: 30%;
-  right: 55%;
-}
-
-.text-block h1 {
-  text-transform: uppercase;
-  font-size: 8rem;
-  letter-spacing: 0.25rem;
-  font-weight: 700;
-  color: white;
-}
-
-.last-name {
-  mix-blend-mode: multiply;
-  text-shadow: -0.063rem 0 black, 0 0.063rem black, 0.063rem 0 black,
-    0 -0.063rem black;
-}
-
-.first-name {
-  color: black;
-  font-family: "Roboto", sans-serif;
-}
-
-.text-block > h6 {
-  color: var(--color-gray);
-}
-
-/* TYPED TEXT*/
-
-.typed-text {
-  margin-left: 0.938rem;
-}
 
 /* ====================ABOUT================== */
 
@@ -452,6 +399,19 @@ a:hover,
 
 .input-area textarea {
   height: 150px;
+}
+
+/* =========================FOOTER========================= */
+
+.footer {
+  background: url("./components/images/abstraction.jpg") no-repeat;
+  background-size: cover;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 
 /* ==============================================BLOG================================================== */

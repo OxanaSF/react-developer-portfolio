@@ -1,18 +1,18 @@
 import React from "react";
-import img1 from "./images/computer_and_hands.jpg";
-import img2 from "./images/three_screens.jpg";
+import pcHandsImg from "./images/computer_and_hands.jpg";
 import Typed from "react-typed";
+import styled from "styled-components";
 
 const Header = () => {
   return (
-    <div id="home" className="container header-wraper">
-      
+    <HeaderStyled id="home" className="container">
+      {/* <div></div> */}
       <div className="text-block">
         <h1 className="last-name">Howard</h1>
         <h1>
           <span className="first-name">Oxana</span>
         </h1>
-        {/* <h5>React Developer</h5> */}
+
         <Typed
           className="typed-text"
           strings={["Front-end Developer", "React Developer"]}
@@ -22,54 +22,119 @@ const Header = () => {
         />
       </div>
 
-      <div className="row">
-        <div className="col-sm-2 left-section-name"></div>
-
-        <div className="col-sm-10 right-section-image"></div>
-
-        {/* <div className="col-sm-10 right-section-image">
-          <div
-            id="carouselExampleFade"
-            class="carousel slide carousel-fade"
-            data-bs-ride="carousel"
-          >
-            <div className="carousel-inner">
-              <div className="carousel-item active">
-                <img src={img1} className="d-block w-100" alt="computer_and_hands" />
-              </div>
-              <div className="carousel-item">
-                <img src={img2} className="d-block w-100" alt="three_screens" />
-              </div>
-            </div>
-            <button
-              className="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleFade"
-              data-bs-slide="prev"
-            >
-              <span
-                className="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Previous</span>
-            </button>
-            <button
-              className="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleFade"
-              data-bs-slide="next"
-            >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div> */}
-      </div>
-    </div>
+      <div className="col-sm-10 right-section-image"></div>
+    </HeaderStyled>
   );
 };
+
+const HeaderStyled = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12.5rem;
+
+  .text-block {
+    transform: translateX(50%);
+  }
+
+  .right-section-image {
+    background: url(${pcHandsImg}) no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+    height: 90vh;
+  }
+
+  .text-block h1 {
+    text-transform: uppercase;
+    font-size: 8rem;
+    letter-spacing: 0.25rem;
+    font-weight: 700;
+    color: white;
+  }
+
+  .last-name {
+    mix-blend-mode: multiply;
+    text-shadow: -0.063rem 0 black, 0 0.063rem black, 0.063rem 0 black,
+      0 -0.063rem black;
+  }
+
+  .first-name {
+    color: black;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .typed-text {
+    margin-left: 0.938rem;
+  }
+
+
+
+  /* First and Last Names Animation on hover */
+  .last-name::before,
+  .first-name::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+
+  .last-name:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .last-name::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background: hsl(30, 2%, 73%);
+    text-shadow: -0.063rem 0 black, 0 0.063rem black, 0.063rem 0 black,
+      0 -0.063rem black;
+    z-index: -1;
+    transition: transform 0.3s ease;
+  }
+
+  .last-name,
+  .first-name {
+    position: relative;
+    /* font-size: 5rem; */
+  }
+
+
+
+  /* Last Name Animation on Hover */
+  .first-name:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .first-name::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    /* background: hsl(35, 29%, 91%); */
+    background: hsl(10, 2%, 90%);
+    text-shadow: -0.063rem 0 black, 0 0.063rem black, 0.063rem 0 black,
+      0 -0.063rem black;
+    z-index: -1;
+    transition: transform 0.3s ease;
+  }
+
+  /* .first-name {
+    position: relative;
+  } */
+
+
+
+
+`;
 
 export default Header;

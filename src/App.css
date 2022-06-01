@@ -9,25 +9,31 @@
 }
 body {
   font-family: "Mulish", sans-serif !important;
-  /* padding-top: 18.75rem; */
+  padding-top: 18.75rem;
   margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box;
   text-decoration: none;
+  /* background-color: purple; */
+}
+
+.container {
+  font-family: "Mulish", sans-serif !important;
+  /* background-color: pink; */
 }
 
 /* ============NAVBAR=============== */
 
 .navbar {
-  padding: 0 !important;
+  /* padding: 0 !important; */
   box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .container-fluid {
   /* width: 100% !important; */
-  margin-right: 0 !important;
-  padding-bottom: 1.25rem;
-  margin-bottom: 0 !important;
+  /* margin-right: 0 !important; */
+  /* padding-bottom: 1.25rem;
+  margin-bottom: 0 !important; */
 }
 
 /* NAVBAR LINKS */
@@ -44,7 +50,7 @@ nav a.nav-link {
   color: var(--color-primary) !important;
   justify-content: space-between;
   margin-top: 1.875rem;
-  margin-left: 0.938rem;
+  /* margin-left: 0.938rem; */
   border: none;
   border-bottom: 0.1875rem solid var(--white);
 }
@@ -57,40 +63,32 @@ nav a.nav-link {
   transition: 0.3;
 }
 
-@media screen and(max-width: 1332px) {
-}
+/* @media screen and(max-width: 1332px) {
+} */
 
 /* ===============HEADER================= */
-
-
-
-
 
 /* ====================ABOUT================== */
 
 .about-wrapper {
-  min-height: 50vh;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.about-left-img {
-  flex: 1 1 40rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
 }
 
 .about-left-img img {
   background-size: cover;
   background-position: center;
   border-radius: 0.313rem;
-  width: 80%;
+  padding-top: 20rem;
 }
 
 .about-right-text {
-  flex: 1 1 40rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 120px;
+  /* padding: 120px; */
+  padding-right: 10rem;
 }
 
 .about-right-text h2 {
@@ -353,40 +351,11 @@ a:hover,
 
 /* ==============================================CONTACTS================================================== */
 
-.contact-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 50vh;
-  margin-bottom: 9.375rem;
-  margin-top: 12.375rem;
-}
-
-.contact-title {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 10rem;
-  letter-spacing: 0.25rem;
-  font-weight: 700;
-  color: white;
-  font-family: "Roboto", sans-serif;
-  mix-blend-mode: multiply;
-  text-shadow: -0.063rem 0 rgb(201, 198, 198), 0 0.063rem rgb(201, 198, 198),
-    0.063rem 0 rgb(201, 198, 198), 0 -0.063rem rgb(201, 198, 198);
-}
-
-.contact-wrapper h1 {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  /* display: grid; */
-  justify-items: start;
-  font-size: 4.75rem;
-  font-size: 3.75rem;
-  margin-bottom: 0rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  padding-bottom: 3.125rem;
-  padding-left: 1.25rem;
+.get-intouch-section {
+  /* display: flex;
+  gap: 10rem;
+  justify-content: center;
+  align-items: center; */
 }
 
 .input-area {
@@ -412,8 +381,44 @@ a:hover,
   align-items: center;
   font-weight: 800;
   letter-spacing: 1px;
+  padding: 0 !important;
 }
 
+.wrapper {
+  animation: scroll 70s linear infinite;
+  background: url("./components/images/abstraction.jpg");
+  color: black;
+  height: 20vh;
+  min-width: 360px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  width: 100%;
+  margin-right: 0 !important;
+}
+
+@keyframes scroll {
+  100% {
+    background-position: 0px -3000px;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .wrapper {
+    animation: scroll 200s linear infinite;
+  }
+}
+
+@media (min-width: 670px) {
+  .title {
+    font-size: 5rem;
+  }
+}
+
+Resources
 /* ==============================================BLOG================================================== */
 
 .blog-wrapper {

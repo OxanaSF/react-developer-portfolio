@@ -5,8 +5,7 @@ import styled from "styled-components";
 
 const Header = () => {
   return (
-    <HeaderStyled id="home" className="container">
-      {/* <div></div> */}
+    <HeaderStyled id="home">
       <div className="text-block">
         <h1 className="last-name">Howard</h1>
         <h1>
@@ -22,16 +21,19 @@ const Header = () => {
         />
       </div>
 
-      <div className="col-sm-10 right-section-image"></div>
+      <div className="right-section-image">
+        <img src={pcHandsImg} alt="" />
+      </div>
     </HeaderStyled>
   );
 };
 
 const HeaderStyled = styled.header`
+  height: 90vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 12.5rem;
+
+  /* margin-bottom: 12.5rem; */
 
   .text-block {
     transform: translateX(50%);
@@ -42,6 +44,10 @@ const HeaderStyled = styled.header`
     background-size: cover;
     opacity: 0.4;
     height: 90vh;
+
+    img {
+      height: 100%;
+    }
   }
 
   .text-block h1 {
@@ -67,8 +73,6 @@ const HeaderStyled = styled.header`
     margin-left: 0.938rem;
   }
 
-
-
   /* First and Last Names Animation on hover */
   .last-name::before,
   .first-name::before {
@@ -91,6 +95,7 @@ const HeaderStyled = styled.header`
     left: 0;
     inset: 0 0 0 0;
     background: hsl(30, 2%, 73%);
+    /* background: hsl(10, 2%, 90%); */
     text-shadow: -0.063rem 0 black, 0 0.063rem black, 0.063rem 0 black,
       0 -0.063rem black;
     z-index: -1;
@@ -100,10 +105,7 @@ const HeaderStyled = styled.header`
   .last-name,
   .first-name {
     position: relative;
-    /* font-size: 5rem; */
   }
-
-
 
   /* Last Name Animation on Hover */
   .first-name:hover::before {
@@ -120,21 +122,13 @@ const HeaderStyled = styled.header`
     bottom: 0;
     left: 0;
     inset: 0 0 0 0;
-    /* background: hsl(35, 29%, 91%); */
     background: hsl(10, 2%, 90%);
+    background: hsl(30, 2%, 73%);
     text-shadow: -0.063rem 0 black, 0 0.063rem black, 0.063rem 0 black,
       0 -0.063rem black;
     z-index: -1;
     transition: transform 0.3s ease;
   }
-
-  /* .first-name {
-    position: relative;
-  } */
-
-
-
-
 `;
 
 export default Header;

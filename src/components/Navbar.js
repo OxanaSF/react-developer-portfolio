@@ -4,7 +4,7 @@ import BlogLink from "./BlogLink";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top wrapper">
       <div className="container-fluid">
         <button
           className="navbar-toggler ms-auto btn"

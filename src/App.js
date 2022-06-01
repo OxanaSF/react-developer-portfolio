@@ -1,6 +1,6 @@
 import "./App.css";
 import { useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import { Outlet, useParams } from "react-router-dom";
 import { scroller } from "react-scroll";
 import Navbar from "./components/Navbar";
@@ -15,10 +15,12 @@ function App() {
   }, [section]);
 
   return (
-    <div className="App">
+    <div className="container">
+  
       <Navbar />
       <Outlet />
       <Footer />
+
     </div>
   );
 }
